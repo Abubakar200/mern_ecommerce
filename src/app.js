@@ -20,11 +20,15 @@ app.use(express.static("public"));
 // import apis
 
 import product from "./routes/product.route.js";
+import user from "./routes/user.route.js"
 import { ErrorUtils } from "./utils/error.js";
 
-// route declaration
-
+// route declaration for product
 app.use("/api/v1", product);
+
+// route declaration for product
+app.use("/api/v1", user);
+
 
 app.use(ErrorUtils);
 export { app };
