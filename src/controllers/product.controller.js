@@ -132,7 +132,7 @@ const getAllReviews = asyncHandler(async (req, res, next) => {
     reviews: product.reviews,
   });
 });
-
+// delete the review
 const deleteReview = asyncHandler(async (req, res, next) => {
   const product = await Product.findById(req.query.productId);
 

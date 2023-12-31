@@ -24,6 +24,7 @@ app.use(cookieParser());
 
 import product from "./routes/product.route.js";
 import user from "./routes/user.route.js";
+import order from "./routes/order.route.js"
 import { ErrorUtils } from "./utils/error.js";
 
 // route declaration for product
@@ -31,6 +32,9 @@ app.use("/api/v1", product);
 
 // route declaration for product
 app.use("/api/v1", user);
+
+// route declaration for order
+app.use("/api/v1", order);
 
 app.use(ErrorUtils);
 export { app };
